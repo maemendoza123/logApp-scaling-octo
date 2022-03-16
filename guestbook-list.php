@@ -1,5 +1,10 @@
 <?php
-
+   require('config/config.php');
+     require('config/db.php');
+ 
+     $query = 'SELECT * FROM person ORDER BY personid DESC';
+     $result = mysqli_query($conn, $query);
+     $persons = mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
 
 <?php include('inc/header.php'); ?>
